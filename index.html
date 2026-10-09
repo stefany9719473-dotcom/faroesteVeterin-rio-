@@ -5,28 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Veterinário do Woody e Jessie</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fontes temáticas do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Woody e Jessie fixos nas laterais -->
-    <div class="character character-woody">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Woody">
-    </div>
-
-    <div class="character character-jessie">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png" alt="Jessie">
-    </div>
-
     <div class="quiz-container">
+        <!-- Personagens Animados nas Laterais -->
+        <div class="character woody"></div>
+        <div class="character jessie"></div>
+
+        <!-- Cabeçalho Temático -->
         <header>
             <div class="sheriff-badge">⭐</div>
             <h1>Quiz do Faroeste Veterinário!</h1>
             <p>Ajude o Woody e a Jessie a cuidar dos animais da fazenda!</p>
         </header>
 
+        <!-- Tela de Início -->
         <div id="start-screen" class="screen">
             <div class="intro-box">
                 <p>"Epa! O Alvo e as vacas do rancho precisam de cuidados médicos. Você tem o conhecimento de um verdadeiro veterinário e do mundo do Rodeio do oeste para nos ajudar?"</p>
@@ -34,18 +31,13 @@
             </div>
         </div>
 
+        <!-- Tela do Jogo -->
         <div id="quiz-screen" class="screen hide">
             <div class="progress-bar-container">
                 <div id="progress-bar"></div>
             </div>
             <div class="quiz-box">
-                <div id="question-number">Pergunta 1 de 160</div>
-
-                <!-- Imagem/desenho da pergunta -->
-                <div class="question-illustration">
-                    <img id="question-image" src="" alt="Ilustração da pergunta">
-                </div>
-
+                <div id="question-number">Pergunta 1 de 5</div>
                 <div id="question-text">Texto da pergunta aqui?</div>
                 <div id="answer-buttons" class="btn-grid">
                     <!-- Botões gerados via JS -->
@@ -54,9 +46,10 @@
             <button id="next-btn" class="btn hide">Próxima Pergunta ➔</button>
         </div>
 
+        <!-- Tela de Resultados -->
         <div id="result-screen" class="screen hide">
             <h2>Fim da Linha, Parceiro!</h2>
-            <div id="score-text">Você acertou 0 de 160 perguntas.</div>
+            <div id="score-text">Você acertou 0 de 5 perguntas.</div>
             <div id="feedback-message">Mensagem de feedback.</div>
             <button id="restart-btn" class="btn">Jogar Novamente 🔄</button>
         </div>
