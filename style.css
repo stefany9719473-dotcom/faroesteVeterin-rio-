@@ -211,3 +211,72 @@ header p {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+/* --- ADICIONE A PARTIR DAQUI NO FINAL DO SEU STYLE.CSS --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Personagens nas Laterais */
+.character {
+    position: fixed;
+    bottom: 20px;
+    width: 140px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.character img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.3));
+}
+
+.character-woody {
+    left: 30px;
+    animation: woodySway 3s ease-in-out infinite alternate;
+}
+
+.character-jessie {
+    right: 30px;
+    animation: jessieBounce 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes woodySway {
+    0% { transform: rotate(-4deg) translateY(0); }
+    100% { transform: rotate(4deg) translateY(-10px); }
+}
+
+@keyframes jessieBounce {
+    0% { transform: scale(1) translateY(0); }
+    50% { transform: scale(1.05) translateY(-12px); }
+    100% { transform: scale(1) translateY(0); }
+}
+
+/* Caixa da Ilustração Central */
+.question-illustration {
+    width: 100%;
+    max-height: 180px;
+    margin: 10px 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 3px solid var(--wood-dark);
+    background-color: #fff9e6;
+}
+
+.question-illustration img {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .character {
+        display: none;
+    }
+}
